@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Editing <%= sardine.name %>'s Page</h1>
+
+        <form action="/sardine/<%= sardine.id %>" method="post">
+        
+            <label for="name">Name: </label>
+            <input type="text" name="name" value="<%= sardine.name %>">
+
+            <label for="ocean">Ocean: </label>
+            <select name="ocean" aria-placeholder="<%= sardine.ocean %>">
+                <option value="Atlantic">Atlantic</option>
+                <option value="Artic">Artic</option>
+                <option value="Indian">Indian</option>
+                <option value="Pacific">Pacific</option>
+                <option value="Southern/Antartic">Southern/Antartic</option>
+            </select>
+
+            <label for="eaten" aria-placeholder="<%= sardine.eaten %>">Have You Eaten?: </label>
+            <input type="radio" name="eaten" value="true">Yes
+            <input type="radio" name="eaten" value="false">No
+
+            <input type="submit" value="Submit">
+        
+        </form>
+
+    </body>
+</html>

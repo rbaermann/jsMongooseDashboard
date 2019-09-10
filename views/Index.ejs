@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <a href="/sardine/new">Add a Sardine!</a>
+        <h1>Look at All the Sardines!</h1>
+        <% for(var sar of sardines) { %>
+            <h4><a href="/sardine/<%= sar.id %>"><%= sar.name %></a> can be found in the <%= sar.ocean %> ocean!</h4>
+            <% if(sar.eaten == true) { %>
+                <h4><%= sar.name %> has also eaten today!</h4>
+            <% } %>
+        <% } %>
+    </body>
+</html>

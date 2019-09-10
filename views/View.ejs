@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+        <a href="/">Home</a>
+        <h1>Welcome to <%= sardine.name %>'s Page!</h1>
+        <h3>Place of Residence: <%= sardine.ocean %> Ocean</h3>
+        <h3>Have You Eaten Today? </h3>
+        <% if(sardine.eaten == true) { %>
+            <h3>Yes!</h3>
+        <% } %>
+        <% if(sardine.eaten == false) { %>
+            <h3>No. :(</h3>
+        <% } %>
+        <a href="/sardine/edit/<%= sardine.id %>">Edit</a>
+        <a href="/sardine/destroy/<%= sardine.id %>">Delete Sardine</a>
+    </body>
+</html>
